@@ -6,7 +6,7 @@ import Instructions from './components/Instructions';
 import Footer from './components/Footer';
 
 const App: FC = () => {
-  
+
   const [cards, setCards] = useState<number[]>([]);
   const addCard = useCallback(() => {
     const existingNumbers = cards.map((card) => card);
@@ -28,7 +28,6 @@ const App: FC = () => {
     const updatedCards = cards.filter((cardNumber) => cardNumber !== number);
     setCards(updatedCards);
   }, [cards]);
-
 
   return (
     <div className="app">
